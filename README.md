@@ -1,97 +1,78 @@
-# Spring Boot REST Hello World API
+# Spring Boot REST Hello World
 
-## 📌 Project Overview
+This is a small Spring Boot project I created to learn how to build REST APIs using Spring Boot.
 
-This project demonstrates how to build a simple REST API using **Java 21 and Spring Boot**. It handles HTTP GET requests and returns a personalized welcome message using a dynamic URL path variable.
+The application accepts a name through the URL and returns a welcome message. It helped me understand how `@RestController`, `@GetMapping`, and `@PathVariable` work.
 
-## 🚀 Features
+## Technologies Used
 
-- Create REST APIs using Spring Boot.
-- Handle HTTP GET requests.
-- Extract dynamic URL values using `@PathVariable`.
-- Return responses using `@RestController`.
-- Run the application using an embedded web server.
+- Java 21
+- Spring Boot
+- Spring Web MVC
+- Maven
 
-## 🛠️ Tech Stack
-
-- **Language:** Java 21
-- **Framework:** Spring Boot 4.1.1
-- **Web:** Spring Web MVC
-- **Build Tool:** Maven
-- **Testing:** Spring Boot Test
-- **API Testing:** Postman
-
-## 📂 Project Structure
+## Project Structure
 
 ```text
-sb-rest-helloworld/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── in/ashokit/
-│   │   │       ├── SbRestHelloworldApplication.java
-│   │   │       └── controller/
-│   │   │           └── HelloWorldRestController.java
-│   │   ├── resources/
-│   │   │   └── application.properties
-│   └── test/
-│       └── java/
-│           └── in/ashokit/
-│               └── SbRestHelloworldApplicationTests.java
-├── mvnw
-├── mvnw.cmd
-├── pom.xml
-├── .gitignore
-└── README.md
+src/
+ └── main/
+     ├── java/
+     │   └── in/ashokit/
+     │       ├── SbRestHelloworldApplication.java
+     │       └── controller/
+     │           └── HelloWorldRestController.java
+     └── resources/
+         └── application.properties
 ```
 
-## ⚙️ Prerequisites
+## How to Run
 
-- Java Development Kit (JDK) 21
-- Git (optional)
-- Postman or a web browser
-
-## 🏃 How to Run the Project
-
-### 1. Clone the Repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/Shayanarshi/sb-rest-helloworld.git
 cd sb-rest-helloworld
 ```
 
-### 2. Run the Application
-
-**Windows:**
+Run the application on Windows:
 
 ```bash
 mvnw.cmd spring-boot:run
 ```
 
-**Linux / macOS:**
+Or on Linux/macOS:
 
 ```bash
-chmod +x mvnw
 ./mvnw spring-boot:run
 ```
 
-Alternatively, open the project in IntelliJ IDEA or Eclipse and run `SbRestHelloworldApplication.java`.
+## API Endpoint
 
-## 🔗 REST API Endpoint
+**Method:** `GET`
 
-| HTTP Method | Endpoint | Description |
-|---|---|---|
-| GET | `/hello/{name}` | Returns a personalized welcome message |
+**URL:**
 
-### Example Request
-
-```http
-GET http://localhost:8080/hello/Shayan
+```text
+http://localhost:8080/hello/Shayan
 ```
 
-### Example Response
+**Response:**
 
 ```text
 Hello :Shayan, Welcome to REST API!
 ```
 
+You can replace `Shayan` with any name to get a different welcome message.
+
+## What I Learned
+
+- Creating a REST controller in Spring Boot.
+- Mapping HTTP GET requests using `@GetMapping`.
+- Reading values from a URL using `@PathVariable`.
+- Running and testing a Spring Boot application.
+
+## Author
+
+**Shayan Arshi**
+
+[GitHub Profile](https://github.com/Shayanarshi) | [Project Repository](https://github.com/Shayanarshi/sb-rest-helloworld)
